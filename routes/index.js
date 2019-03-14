@@ -121,7 +121,7 @@ router.post('/component/reg', verifyToken, function(req, res, next) {
         
      */       
             
-            var qu = 'INSERT INTO item_details values('+null+',"'+req.body.name+'","'+req.body.category+'","'+req.body.subcategory+'","'+req.body.desc+'","'+req.body.img+'","'+req.body.url+'","'+req.body.specs+'","'+req.body.hsn+'",'+req.body.quantity+',"'+req.body.manufacturer+'","'+req.body.modelid+'","'+req.body.dslink+'","'+req.body.tlink+'",'+req.body.cost+',"'+req.body.cab+'","'+req.body.cup+'","'+req.body.room+'",'+req.body.venderid+')' ;
+            var qu = 'INSERT INTO item_details values('',"'+req.body.name+'","'+req.body.category+'","'+req.body.subcategory+'","'+req.body.desc+'","'+req.body.img+'","'+req.body.url+'","'+req.body.specs+'","'+req.body.hsn+'",'+req.body.quantity+',"'+req.body.manufacturer+'","'+req.body.modelid+'","'+req.body.dslink+'","'+req.body.tlink+'",'+req.body.cost+',"'+req.body.cab+'","'+req.body.cup+'","'+req.body.room+'",'+req.body.venderid+')' ;
             console.log(qu);
         con.query(qu, function(err, rows, fields) {
           if(!err) {
