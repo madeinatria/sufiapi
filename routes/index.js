@@ -245,6 +245,8 @@ router.post('/faculty/reg', verifyToken, function(req, res, next) {
 
 /* for project registration */
 
+/* for not project registration */
+
 router.post('/project/reg', verifyToken, function(req, res, next) {
   jwt.verify(req.token, 'SuperSecRetKey', (err, authData)=>{
 
@@ -259,7 +261,7 @@ router.post('/project/reg', verifyToken, function(req, res, next) {
             
             var qu = 'INSERT INTO project_details values('+null+',"'+req.body.name+'","'+req.body.id+'","'+req.body.description+'","'+req.body.itemids+'","'+req.body.img+'","'+req.body.url+'","'+req.body.sdate+'","'+req.body.edate+'","'+req.body.status+'",'+req.body.budget+','+req.body.cost+')' ;
             console.log(qu);
-        con.query(qu, function(err, rows, fields) {
+            con.query(qu, function(err, rows, fields) {
           if(!err) {
             console.log(rows.affectedRows);
                         res.send(rows);

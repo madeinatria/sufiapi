@@ -1,0 +1,47 @@
+Looking for git in: git
+Using git 2.7.4 from git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/john/Documents/node/express-locallibrary-tutorial
+> git rev-parse --show-toplevel
+> git status -z -u
+> git config --get commit.template
+Open repository: /home/john/Documents/node/ciaweb
+> git rev-parse --show-toplevel
+> git status -z -u
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git symbolic-ref --short HEAD
+> git check-ignore -z --stdin
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git symbolic-ref --short HEAD
+> git rev-parse feature
+> git rev-parse --symbolic-full-name feature@{u}
+> git rev-list --left-right feature...refs/remotes/origin/feature
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :routes/index.js
+> git show :routes/index.js
+> git show :app.js
+> git check-ignore -z --stdin
+> git show :routes/index.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app.js
+> git show :app.js
+> git show :routes/index.js
+> git add -A -- .

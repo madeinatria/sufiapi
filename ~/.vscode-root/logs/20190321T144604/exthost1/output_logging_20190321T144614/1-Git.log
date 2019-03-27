@@ -1,0 +1,73 @@
+Looking for git in: git
+Using git 2.7.4 from git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/john/Documents/node/ciaweb
+> git status -z -u
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/john/Documents/node/express-locallibrary-tutorial
+> git rev-parse --show-toplevel
+> git status -z -u
+fatal: Not a git repository (or any of the parent directories): .git
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse feature
+> git rev-parse --symbolic-full-name feature@{u}
+> git rev-list --left-right feature...refs/remotes/origin/feature
+> git show :form.html
+> git check-ignore -z --stdin
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :routes/index.js
+> git show :hmm.sql
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/john/Documents/node/sufi/auth/nodjs-authentication-with-jwt
+> git status -z -u
+> git show :index.js
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :routes/index.js
+> git show :routes/users.js
+> git show :routes/index.js
+> git show :app.js
+> git check-ignore -z --stdin
+> git ls-tree -l HEAD -- /home/john/Documents/node/express-locallibrary-tutorial/~/.vscode-root/GPUCache/index
+> git show 53843733fbf304819dd2de7bbbf143c39174b620
+> git ls-tree -l HEAD -- /home/john/Documents/node/express-locallibrary-tutorial/~/.vscode-root/CachedExtensions/user
+> git show cf917622147cd325e75d306231641c1d5c48752f
+> git show HEAD:~/.vscode-root/CachedExtensions/user
+> git ls-tree -l HEAD -- /home/john/Documents/node/express-locallibrary-tutorial/routes/index.js
+> git show 88909a4a307de666524d979328a655e92489c86e
+> git show HEAD:routes/index.js
+> git show :app.js
+> git show :routes/index.js
