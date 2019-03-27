@@ -12,3 +12,5 @@
 [2019-03-26 16:35:47.798] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:javascript"}
 [2019-03-26 16:35:47.798] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
 [2019-03-26 16:35:47.981] [exthost] [info] eager extensions activated
+[2019-03-27 09:19:07.468] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-03-27 09:19:07.468] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/extension-editing/dist/extension
