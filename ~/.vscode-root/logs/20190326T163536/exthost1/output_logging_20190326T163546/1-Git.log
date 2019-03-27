@@ -45,3 +45,46 @@ fatal: Not a git repository (or any of the parent directories): .git
 > git show :app.js
 > git show :routes/index.js
 > git add -A -- .
+> git commit --quiet --allow-empty-message --file - --all
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git show :routes/index.js
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :routes/index.js
+> git push origin master:master
+To https://github.com/madeinatria/sufiapi.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/madeinatria/sufiapi.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+> git pull --tags origin master
+> git show :routes/index.js
+From https://github.com/madeinatria/sufiapi
+ * branch            master     -> FETCH_HEAD
+   b54bed5..6cab0fd  master     -> origin/master
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :routes/index.js
+> git add -A -- .
+> git commit --quiet --allow-empty-message --file - --all
