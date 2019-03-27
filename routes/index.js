@@ -7,7 +7,7 @@ var slug = require('slug');
 var con = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
-  password: "cia_1234",
+  password: "rickyjerry_0",
   database: "cia"
 });
 console.log("hi");
@@ -311,7 +311,75 @@ router.post('/transaction/reg', verifyToken, function(req, res, next) {
 }) ;
 
 // end trnas registration
+
+/* for points registration */
+
+router.post('/points/reg', verifyToken, function(req, res, next) {
+  jwt.verify(req.token, 'SuperSecRetKey', (err, authData)=>{
+
+    if(err){
+
+        res.sendStatus(403);
+
+    }else{
+
+      
+      
+      
+      var qu = 'INSERT INTO points(uid,usn,points,status,timestamp,link) values('+null+',"'+req.body.usn+'",'+req.body.points+',"'+req.body.status+'","'+req.body.timestamp+'","'+req.body.link+'")' ;
+            console.log(qu);
+        con.query(qu, function(err, rows, fields) {
+          if(!err) {
+            console.log(rows.affectedRows);
+                        res.send(rows);
+          }
+          else {
+            res.send(err) ;
+            
+          }
+        });
+
+    }
+
+});
+}) ;
+
+// end points registration
+
 // end of all putting
+/* for points get */
+
+router.post('/points/get', function(req, res, next) {
+  /*  jwt.verify(req.token, 'SuperSecRetKey', (err, authData)=>{
+  
+      if(err){
+  
+          res.sendStatus(403);
+  
+      }else{
+  
+          
+   */           
+              
+              var qu = 'SELECT * FROM points WHERE usn="'+req.body.usn+'"' ;
+              console.log(qu);
+          con.query(qu, function(err, rows, fields) {
+            if(!err) {
+             // console.log(rows.affectedRows);
+                          res.json(rows);
+            }
+            else {
+              res.send(err) ;
+              
+            }
+          });
+  /*
+      }
+  
+  }); */
+  }) ;
+  
+  // end points get
 
 /* for student get */
 
