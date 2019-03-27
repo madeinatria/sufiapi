@@ -7,7 +7,7 @@ var slug = require('slug');
 var con = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
-  password: "rickyjerry_0",
+  password: "cia_1234",
   database: "cia"
 });
 console.log("hi");
@@ -121,7 +121,7 @@ router.post('/component/reg', verifyToken, function(req, res, next) {
         
      */       
             
-            var qu = 'INSERT INTO item_details values('+null+',"'+req.body.name+'","'+req.body.category+'","'+req.body.subcategory+'","'+req.body.desc+'","'+req.body.img+'","'+req.body.url+'","'+req.body.specs+'","'+req.body.hsn+'",'+req.body.quantity+',"'+req.body.manufacturer+'","'+req.body.modelid+'","'+req.body.dslink+'","'+req.body.tlink+'",'+req.body.cost+',"'+req.body.cab+'","'+req.body.cup+'","'+req.body.room+'",'+req.body.venderid+')' ;
+            var qu = 'INSERT INTO item_details values('',"'+req.body.name+'","'+req.body.category+'","'+req.body.subcategory+'","'+req.body.desc+'","'+req.body.img+'","'+req.body.url+'","'+req.body.specs+'","'+req.body.hsn+'",'+req.body.quantity+',"'+req.body.manufacturer+'","'+req.body.modelid+'","'+req.body.dslink+'","'+req.body.tlink+'",'+req.body.cost+',"'+req.body.cab+'","'+req.body.cup+'","'+req.body.room+'",'+req.body.venderid+')' ;
             console.log(qu);
         con.query(qu, function(err, rows, fields) {
           if(!err) {
@@ -259,7 +259,7 @@ router.post('/project/reg', verifyToken, function(req, res, next) {
         
             
             
-            var qu = 'INSERT INTO project_details values('+null+',"'+req.body.name+'","'+req.body.id+'","'+req.body.description+'","'+req.body.itemids+'","'+req.body.img+'","'+req.body.url+'","'+req.body.sdate+'","'+req.body.edate+'","'+req.body.status+'",'+req.body.budget+','+req.body.cost+')' ;
+            var qu = 'INSERT INTO project_details values('+req.body.project_id+',"'+req.body.name+'","'+req.body.id+'","'+req.body.description+'","'+req.body.itemids+'","'+req.body.img+'","'+req.body.url+'","'+req.body.sdate+'","'+req.body.edate+'","'+req.body.status+'",'+req.body.budget+','+req.body.cost+')' ;
             console.log(qu);
             con.query(qu, function(err, rows, fields) {
           if(!err) {
