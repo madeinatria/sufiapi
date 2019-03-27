@@ -7,7 +7,7 @@ var slug = require('slug');
 var con = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
-  password: "rickyjerry_0",
+  password: "cia_1234",
   database: "cia"
 });
 console.log("hi");
@@ -257,7 +257,7 @@ router.post('/project/reg', verifyToken, function(req, res, next) {
         
             
             
-            var qu = 'INSERT INTO project_details values('+null+',"'+req.body.name+'","'+req.body.id+'","'+req.body.description+'","'+req.body.itemids+'","'+req.body.img+'","'+req.body.url+'","'+req.body.sdate+'","'+req.body.edate+'","'+req.body.status+'",'+req.body.budget+','+req.body.cost+')' ;
+            var qu = 'INSERT INTO project_details values('+req.body.project_id+',"'+req.body.name+'","'+req.body.id+'","'+req.body.description+'","'+req.body.itemids+'","'+req.body.img+'","'+req.body.url+'","'+req.body.sdate+'","'+req.body.edate+'","'+req.body.status+'",'+req.body.budget+','+req.body.cost+')' ;
             console.log(qu);
         con.query(qu, function(err, rows, fields) {
           if(!err) {
